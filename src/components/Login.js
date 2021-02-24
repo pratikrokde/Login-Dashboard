@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
 function Login({ setLoggedInn }) {
-  const logInHandler = () => {
-    setLoggedInn(true);
-    alert("Logged inn successfully");
+  //get data from input by user
+  const [inputData, setInputData] = useState({
+    username: "",
+    password: "",
+  });
+
+  //handle input data
+  const handleinput = (e) => {
+    setInputData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    // console.log(data);
   };
+
+  //handle whether user is logged inn or not
+  const logInHandler = () => {
+    if (inputData.username && inputData.password) {
+      setLoggedInn(true);
+      alert("Logged inn successfully");
+      console.log(inputData);
+    }
+  };
+
   return (
     <div>
       <Form name="normal_login" className="login-form">
@@ -24,6 +41,8 @@ function Login({ setLoggedInn }) {
           <Input
             placeholder="Username"
             prefix={<UserOutlined className="site-form-item-icon" />}
+            onChange={handleinput}
+            name="username"
           />
         </Form.Item>
 
@@ -41,6 +60,8 @@ function Login({ setLoggedInn }) {
             placeholder="Password"
             type="password"
             prefix={<LockOutlined className="site-form-item-icon" />}
+            onChange={handleinput}
+            name="password"
           />
         </Form.Item>
 
