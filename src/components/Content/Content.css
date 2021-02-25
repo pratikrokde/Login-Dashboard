@@ -1,5 +1,42 @@
 @import "~antd/dist/antd.css";
 
 .layoutContent {
-  width: 80%;
+  width: 70%;
+  background-color: rgba(201, 230, 230, 0.171);
+}
+table,
+tr,
+th,
+td {
+  border: 1px solid grey;
+  margin: 1rem auto 0;
+  padding: 4px 55px;
+}
+th {
+  padding: 6px 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+td {
+  font-size: 1.1rem;
+}
+.deleteIcon {
+  color: rgb(3, 128, 96);
+  cursor: pointer;
+}
+.getDataBtn {
+  padding: 7px 26px;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  background-color: rgb(6, 151, 177);
+  border-radius: 8px;
+  border: 1px solid rgb(6, 151, 177);
+  transition: all 0.3s ease-in-out;
+}
+.getDataBtn:hover {
+  border: 1px solid rgb(6, 151, 177);
+  background-color: white;
+  color: rgb(6, 151, 177);
+  cursor: pointer;
 }
