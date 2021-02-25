@@ -1,0 +1,11 @@
+@import "~antd/dist/antd.css";
+
+.layout {
+  background-color: white;
+  min-width: 0px !important;
+  width: 0px !important;
+}
+
+.layout .sider .submenu {
+  font-size: 1.2rem;
+}

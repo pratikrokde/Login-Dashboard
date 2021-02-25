@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
-import Login from "./components/Login";
-import Navbar from "./components/Navbar";
-import Dashboard from "./components/Dashboard";
+import Login from "./containers/Login";
+import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./containers/Dashboard/Dashboard";
 
 import {
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [loggedInn, setLoggedInn] = useState(false);
+  const [loggedInn, setLoggedInn] = useState(true);
   return (
     <Router>
       <div className="App">
